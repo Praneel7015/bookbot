@@ -12,7 +12,7 @@ def num_of_char_each(u):
     d = {}
     m = u.lower()
     for char in m:
-        if 'a' <= char <= 'z':
+        if char.isalpha():
             if char in d:
                 d[char] +=1
             else :
@@ -24,3 +24,4 @@ def report():
     print(f"============ BOOKBOT ============\nAnalyzing book found at {path}\n----------- Word Count ----------\nFound {get_book_words(m)} total words\n--------- Character Count -------")
     for i in num_of_char_each(m):
         print(i)
+    print("============= END ===============")
